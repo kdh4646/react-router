@@ -7,11 +7,14 @@ import RootLayout from "./pages/Root";
 import ErorrPage from "./pages/Error";
 
 /*
-  path: .../product
-  element: JSX is the element
-  children: connected to this route
-  errorElement: Error Page to be shown
-  dynamic page allocation: using ":"
+  createBrowserRouter()
+
+  1.Path: .../product
+  2.Element: JSX is the element
+  3.Children: connected to this route
+  4.ErrorElement: Error Page to be shown
+  5.Index: default route if parent route path is currently active
+  6.Dynamic page allocation: using ":"
 */
 const router = createBrowserRouter([
   {
@@ -19,7 +22,7 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <ErorrPage />,
     children: [
-      { path: "/", element: <HomePage /> },
+      { index: true, element: <HomePage /> },
       { path: "/products", element: <ProductsPage /> },
       { path: "/products/:productId", element: <ProductDetailPage /> },
     ],
