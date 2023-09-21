@@ -3,16 +3,19 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./pages/Home";
 import ProductsPage from "./pages/Products";
 import RootLayout from "./pages/Root";
+import ErorrPage from "./pages/Error";
 
 /*
-  ex) .../product is the path
-      JSX is the element
-      children is connected to this route
+  path: .../product
+  element: JSX is the element
+  children: connected to this route
+  errorElement: Error Page to be shown
 */
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
+    errorElement: <ErorrPage />,
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/products", element: <ProductsPage /> },
