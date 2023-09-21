@@ -9,6 +9,9 @@
 
 <!--
 1. Using `npm install react-router-dom`
+2. Handling multiple pages using React Router in single page
+3. Using `Link`
+
 
 1. Handling HTTP request
 1. Implementing async/await (fetch..then()) to get response
