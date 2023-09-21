@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import HomePage from "./pages/Home";
 import ProductsPage from "./pages/Products";
+import ProductDetailPage from "./pages/ProductDetail";
 import RootLayout from "./pages/Root";
 import ErorrPage from "./pages/Error";
 
@@ -10,6 +11,7 @@ import ErorrPage from "./pages/Error";
   element: JSX is the element
   children: connected to this route
   errorElement: Error Page to be shown
+  dynamic page allocation: using ":"
 */
 const router = createBrowserRouter([
   {
@@ -19,6 +21,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/products", element: <ProductsPage /> },
+      { path: "/products/:productId", element: <ProductDetailPage /> },
     ],
   },
 ]);
