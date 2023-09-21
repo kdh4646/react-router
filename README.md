@@ -10,7 +10,7 @@
 <!--
 1. Using `npm install react-router-dom`
 2. Handling multiple pages using React Router in single page
-3. Using `Link`. `Outlet`, `NavLink`, `useNavigate`
+3. Using `Link`. `Outlet`, `NavLink`, `useNavigate`, `useParam()`
 
 
 1. Handling HTTP request
